@@ -43,14 +43,10 @@ INSERT INTO users (pseudo, password, level, experience, avatar) VALUES
 
 INSERT INTO quests (quest_title, quest_time, experience) VALUES 
 ("Être attentif lors de ses déplacements", "quotidien", 600),
-("Être attentif lors de ses déplacements", "quotidien", 400),
-("Réfléchir avant d’agir (TOP)", "quotidien", 500),
-("Réfléchir avant d’agir (TOP)", "quotidien", 700),
+("Réfléchir avant d'agir (TOP)", "quotidien", 500),
 ("Adapter sa vitesse de conduite et sans téléphone", "quotidien", 500),
-("Adapter sa vitesse de conduite et sans téléphone", "quotidien", 600),
 ("Ni drogue, ni alcool", "quotidien", 400),
-("Port des EPI (Equipement de Protection Individuel) adaptés", "quotidien", 900),
-("Port des EPI (Equipement de Protection Individuel) adaptés", "quotidien", 700);
+("Port des EPI (Equipement de Protection Individuel) adaptés", "quotidien", 900);
 
 INSERT INTO steps (step, is_finished, quest_id) VALUES
 ("L'organisation sur mes interventions de la journée permet des déplacements en toute sécurité", false, 1),
