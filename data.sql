@@ -7,6 +7,8 @@ CREATE TABLE `users` (
     `password` varchar(20) NOT NULL,
     `level` int  NOT NULL DEFAULT 1,
     `experience` int NOT NULL DEFAULT 0,
+    `role` varchar(255), 
+    `email` varchar(255),
     `avatar` varchar(255) NOT NULL DEFAULT ('https://i.ibb.co/ckgRshd/pexels-9889007-1.jpg'),
     PRIMARY KEY (
         `id`
