@@ -6,11 +6,11 @@ const findUserByEmail = (email) =>
     .query('SELECT * FROM users WHERE email=?',
         [email]);
 
-const insertUser = (email, password, role) =>
+const insertUser = (pseudo, password, level, experience, role, email, avatar) =>
     connection
     .promise()
-    .query('INSERT INTO users (`email`, `password`, `role`) VALUES (?, ?, ?)',
-        [email, password, role]);
+    .query('INSERT INTO users (`pseudo`, `password`, `level`, `experience`,  `role`, `email`, `avatar`) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        [pseudo, password, level, experience, role, email, avatar]);
 
 module.exports = {
     findUserByEmail,
