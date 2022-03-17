@@ -22,6 +22,16 @@ router.get('/', checkJwt, (req, res) => {
     });
 });
 
+router.get('/simple', (req, res) => {
+  connection.query('SELECT * FROM users', (err, result) => {
+      if (err) {
+          res.status(500).send('Error retrieving users from database');
+      } else {
+          res.json(result);
+      }
+  });
+});
+
 router.get('/:id', (req, res) => {
     const userId = req.params.id;
     connection.query(
