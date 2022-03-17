@@ -1,3 +1,4 @@
+require('dotenv').config();
 const connection = require('./db-config');
 const express = require('express');
 const cors = require('cors');
@@ -15,10 +16,20 @@ connection.connect((err) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({
+  extended: true
+}));
 
 app.use(cors())
+app.use('/uploads', express.static('uploads'));
 app.use('/api', router);
+
+
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
