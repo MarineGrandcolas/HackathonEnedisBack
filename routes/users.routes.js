@@ -4,7 +4,7 @@ const Joi = require('joi');
 const argon2 = require('argon2');
 const {
     generateJwt
-} = require('../utils/auth');
+} = require('../utils/auths');
 const checkJwt = require('../middlewares/checkJwt')
 
 const {
