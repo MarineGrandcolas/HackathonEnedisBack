@@ -1,6 +1,11 @@
 const router = require('express').Router();
-const untitledRouter = require('./untitled.routes')
+const usersRouter = require('./users.routes');
+const questsRouter = require('./quests.routes');
+const stepsRouter = require('./steps.routes');
 
-router.use('/untitled', untitledRouter);
+
+router.use('/users', usersRouter);
+router.use('/quests', questsRouter);
+router.use('/steps', stepsRouter);
 
 module.exports = router;
