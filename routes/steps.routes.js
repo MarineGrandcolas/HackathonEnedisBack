@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 
 router.get('/', (req, res) => {
-    connection.query('SELECT * FROM steps INNER JOIN quests ON steps.quest_id = quests.id', (err, result) => {
+    connection.query('SELECT * FROM steps', (err, result) => {
       if (err) {
         res.status(500).send('Error retrieving steps from database');
       } else {
